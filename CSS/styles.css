@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Comfortaa');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    background: white;
+}
+.wrapper {
+    display: flex; 
+    position: relative;
+}
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 200px;
+    background-color:teal;
+    padding-top: 100px; 
+    font-family: 'Comfortaa';
+}
+.sidebar a:hover {
+    color: green;
+}
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 25px; 
+    color: white;
+    display: block;
+}
+.sidebar ul li a .fas{
+    width: 25px
+}
+.wrapper .main-content {
+    margin-left: 200px;
+    width: 100%;
+}
+.wrapper .main-content .header {
+    padding: 20px;
+    color: white;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 40px;
+    font-family: 'Comfortaa';
+    background-color: teal;
+}
+.header h2{
+    color: 'Indie Flower';
+}
+.wrapper .main-content .info {
+    margin: 20px;
+    color: #717171;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+#form-control {
+    font-size: 20px;
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+}
+.formBox {
+    margin-top:15px;
+}
+.formBox label {
+    color:teal;
+    font-weight: 500;
+}
