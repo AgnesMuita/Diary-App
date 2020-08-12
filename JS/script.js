@@ -1,32 +1,29 @@
 function Diary (date, name, description){
-    this.date = date;
-    this.name = name;
-    this.description = description;
+    this.dateInput = document.getElementById ('#date');
+    this.nameInput= document.getElementById ('#name').val();;
+    this.descriptionInput = document.getElementById ('#summernote');
+    this.addButton = document.getElementById ('#add');
+    this.saveEntry = document.getElementById ('#isOutput');
+    this.setEvents();
 }
 this.entries = [];
 
-$(document).ready(function(){
-    $("#form-control").submit (function(event){
-        event.preventDefault();
-        var date = document.getElementById ('#date').val();
-        var name = document.getElementById ('#name').val();
-        var description = document.getElementById ('#summernote').val();
-        var entry = newEntry(date.value, name.value, description.value);
-        this.entries.push(entry);
+setEvents() 
+{
+    this.addButton.onclick = (event) => {
+            event.preventDefault();
+            var entry = newEntry(date.value, name.value, description.value);
+            this.entries.push(entry);
+            this.saveEntry();
+    };
+};
 
-        var entries = [];
-        var isOutput = document.getElementById ("#isOutput").val();
-        for (var i=0; i < entries.length; i++){
-        isOutput.innerHTML += '<h3>when: ${entry.date}</h3>${entry.name}<br>description:${entry.description}';
-        }
-    });
-   
-// $entry.forEach(myFunction);
-//         document.getElementById("isOutput").innerHTML = txt;
-//         function myFunction (date, name, description){
-//             txt= txt + value + "<br>"
-//         }
-// document.addEventListener('DOMContentLoaded', ()=>{
-// document.getElementById('add_button').addEventListener('submit, addEntry');
-// });
-});
+saveEntry()
+{
+   this.saveEntry.innerHTML = "";
+   for (let i= 0; i< this.entries.length; i++){
+       var entry = this.entries[i];
+       this.saveEntry.innerHTML += "<h2>${entry.name}</h2>when: ${entry.date}<br>do:${entry.description}";
+   }
+};
+
