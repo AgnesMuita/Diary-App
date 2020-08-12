@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="CSS/bootstrap.css" type= "text/css">
     <!-- <link rel="stylesheet" href="CSS/summernote-bs4.css"> -->
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <!-- <script src = "JS/jquery-3.5.1.js"></script>
+    <script src = "JS/script.js"></script> -->
     <title>Archive</title>
 </head>
 <body>
@@ -13,17 +15,20 @@
         <div id ="navbar" class="sidebar">
             <ul>
                 <li><a href = "index.html"><i class="fas fa-pen"></i>Compose</a></li>
-                <li><a href = "archive.html"><i class="fas fa-archive"></i>Archive</a></li>
+                <li><a href = "archive.html" id="archive"><i class="fas fa-archive"></i>Archive</a></li>
             </ul>
         </div>
         <div class="main-content">
             <div class="header">My Diary</div>
-            <div class="info2">
-                <div id = "isOutput">
-                    <h1>My Events</h1>
-                    <h2></h2>
-                    <li></li>
-                </div>
-        </div>
+            <div id ="entries"></div>
+        <a href="/">Back to Form</a>
+    <script>
+        const entriesList = document.getElementById("entries");
+        new URLSearchParams(window.location.search).forEach ((date, name, description)=> {
+            entriesList.append (`<h3>${entry.name}</h3>when: ${entry.date}<br>do:${entry.description}`)
+            entriesList.append(document.createElement('br'))
+        });
+    </script>
+    </div>
 </body>
 </html>
