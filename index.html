@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="CSS/bootstrap.css" type= "text/css">
     <!-- <link rel="stylesheet" href="CSS/summernote-bs4.css"> -->
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="JS/jquery-3.5.1.js"></script>
+    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/summernote-bs4.js"></script> -->
+    <script src="JS/script.js"></script>
     <title>My Diary Web-App</title>
 </head>
 <body>
@@ -19,7 +25,8 @@
         <div class="main-content">
             <div class="header">My Diary</div>
             <div class="info">
-                <form id = "form-control">
+                <form method="POST" id = "form-control">
+                    <small></small>
                     <div class="formBox">
                         <label for="date">Date</label>
                         <br>
@@ -36,18 +43,13 @@
                         <textarea name="description" id ="summernote" rows="10" cols="70" name="Description" value=""></textarea>
                     </div>
                     <div class="formBox">
+                        <button type="submit" class = "btn btn-success" id="add_button">Save Entry</button>
                         <button class = "btn btn-primary" id="view_button">View Entry Summary</button>
-                        <button class = "btn btn-success" id="add_button">Save Entry</button>
                     </div>
                 </form>
+                <div id="isOutput"></div>
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="JS/jquery-3.5.1.js"></script>
-    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="JS/summernote-bs4.js"></script> -->
-    <script src="JS/script.js"></script>
 </body>
 </html>
