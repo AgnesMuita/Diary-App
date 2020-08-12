@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="JS/jquery-3.5.1.js"></script>
-    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="JS/summernote-bs4.js"></script> -->
     <script src="JS/script.js"></script>
     <title>My Diary Web-App</title>
 </head>
@@ -25,29 +22,29 @@
         <div class="main-content">
             <div class="header">My Diary</div>
             <div class="info">
-                <form method="POST" id = "form-control">
-                    <small></small>
+                <form action="" id = "form-control">
                     <div class="formBox">
                         <label for="date">Date</label>
                         <br>
-                        <input type="date" id="date" name="AddDate"  value="">
+                        <input type="date" id="date" name="date" value="" required>
                     </div>
                     <div class = "formBox">
                         <label for="name">Name of the Event</label>
                          <br>
-                        <input type="text" id="name" name="AddItem">
+                        <input type="text" id="name" name="name" value="" required>
                     </div>
                     <div class ="formBox">
-                        <label for="name">Event Description</label>
+                        <label for="summernote">Event Description</label>
                         <br>
-                        <textarea name="description" id ="summernote" rows="10" cols="70" name="Description" value=""></textarea>
+                        <textarea name="description" id ="summernote" rows="10" cols="70" value=""></textarea>
                     </div>
                     <div class="formBox">
-                        <button type="submit" class = "btn btn-success" id="add_button">Save Entry</button>
+                        <button type="submit" class = "btn btn-success" id="add">Save Entry</button>
                         <button class = "btn btn-primary" id="view_button">View Entry Summary</button>
+                        <button type="reset" class = "btn btn-danger">Reset</button>
                     </div>
                 </form>
-                <div id="isOutput"></div>
+                <!-- <div id="isOutput"></div> -->
             </div>
         </div>
     </div>
