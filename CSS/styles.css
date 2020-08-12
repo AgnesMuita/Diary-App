@@ -23,7 +23,7 @@ body {
     font-family: 'Comfortaa';
 }
 .sidebar a:hover {
-    color: green;
+    color: black;
 }
 .sidebar ul li {
     padding: 15px;
